@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>  
+<!--node pkg="tf" type="static_transform_publisher" name="optitrack2lidar" args="0 0 0 3.14 0 0 Robot_1/base_link os1_sensor 100" /-->  
+
+<node pkg="tf" type="static_transform_publisher" name="camera2lidar" args="-0.675 -0.008 0.96 0 0 0    camera_pose_frame os1_sensor 100" />  
+
+
+<node pkg="tf" type="static_transform_publisher" name="sensor2lidar" args="0 0 0.03618 0 0 1 0 os1_sensor os1_lidar 100" /> 
+
+
+</launch>
+

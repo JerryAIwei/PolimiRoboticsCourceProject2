@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+<param name="use_sim_time" value="true" />
+<node pkg="map_server" type="map_server" name="map_server" args="$(dirname)/map/map.yaml"/>
+<include file = "$(dirname)/tf/static_tf_visual.launch"/>
+<include file = "$(dirname)/point2laser/pointcloud_to_laser.launch"/>
+<include file = "$(dirname)/move_bases/amcl.launch"/>
+</launch>

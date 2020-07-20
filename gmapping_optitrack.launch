@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+<param name="use_sim_time" value="true" />
+<include file = "$(dirname)/tf/static_tf_optitrack.launch"/>
+<include file = "$(dirname)/point2laser/pointcloud_to_laser.launch"/>
+<include file = "$(dirname)/gmapping/gmapping.launch">
+  <arg name="base_frame"  value="Robot_1/base_link"/>
+  <arg name="odom_frame"  value="world"/>
+</include>
+</launch>
